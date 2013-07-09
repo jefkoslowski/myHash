@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en" manifest="password.appcache">
+<head>
+  <meta charset="UTF-8">
+  <title>Password</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png" />
+  <link href="css/password.min.css" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <div id="options">
+      <div class="header">
+        <i class="icon-cog"> </i>
+      </div>
+      <form action="">
+        <section>
+          <strong>Requirements</strong>
+          <div class="form-item">
+            <input name="requireDigit" id="requireDigit" type="checkbox" class="update">
+            <label for="requireDigit">Digit <i class="icon-check-empty-1"> </i><i class="icon-check-1"> </i></label>
+          </div>
+          <div class="form-item">
+            <input name="requirePunctuation" id="requirePunctuation" type="checkbox" class="update">
+            <label for="requirePunctuation">Punctuation <i class="icon-check-empty-1"> </i><i class="icon-check-1"> </i></label>
+          </div>
+          <div class="form-item">
+            <input name="requireMixedCase" id="requireMixedCase" type="checkbox" class="update">
+            <label for="requireMixedCase">Mixed Case <i class="icon-check-empty-1"> </i><i class="icon-check-1"> </i></label>
+          </div>
+        </section>
+        <section>
+          <strong>Restrictions</strong>
+          <div class="form-item">
+            <input name="restrictSpecial" id="restrictSpecial" type="checkbox" class="update">
+            <label for="restrictSpecial">No Special <i class="icon-check-empty-1"> </i><i class="icon-check-1"> </i></label>
+          </div>
+          <div class="form-item">
+            <input name="restrictDigits" id="restrictDigits" type="checkbox" class="update">
+            <label for="restrictDigits">Digits Only <i class="icon-check-empty-1"> </i><i class="icon-check-1"> </i></label>
+          </div>
+          <div class="form-item">
+            <label for="hashWordSize">Size <i>4</i></label>
+            <select name="hashWordSize" id="hashWordSize" class="update">
+              <option value="4">4</option>
+              <option value="6">6</option>
+              <option value="8">8</option>
+              <option value="10">10</option>
+              <option value="12">12</option>
+              <option value="14">14</option>
+              <option value="16">16</option>
+              <option value="18">18</option>
+              <option value="20">20</option>
+              <option value="22">22</option>
+              <option value="24">24</option>
+              <option value="26">26</option>
+            </select>
+          </div>
+        </section>
+      </form>
+    </div>
+    <div id="main">
+      <header>
+        <button class="options"><i class="icon-menu"> </i></button>
+        <div class="service" data-index="0">
+          <ul>
+            <li data-color="red" data-tag=""><img src="images/icons/default.png" alt="Default"/></li>
+            <li data-color="yellow" data-tag="blogger"><img src="images/icons/blogger.png" alt="Blogger"/></li>
+            <li data-color="blue" data-tag="delicious"><img src="images/icons/delicious.png" alt="Delicious"/></li>
+            <li data-color="red" data-tag="dribble"><img src="images/icons/dribble.png" alt="Dribble"/></li>
+            <li data-color="blue" data-tag="dropbox"><img src="images/icons/dropbox.png" alt="Dropbox"/></li>
+            <li data-color="red" data-tag="ebay"><img src="images/icons/ebay.png" alt="Ebay"/></li>
+            <li data-color="blue" data-tag="facebook"><img src="images/icons/facebook.png" alt="Facebook"/></li>
+            <li data-color="red" data-tag="lastfm"><img src="images/icons/lastfm.png" alt="LastFM"/></li>
+            <li data-color="blue" data-tag="linkedin"><img src="images/icons/linkedin.png" alt="Linkedin"/></li>
+            <li data-color="blue" data-tag="paypal"><img src="images/icons/paypal.png" alt="Paypal"/></li>
+            <li data-color="red" data-tag="pinterest"><img src="images/icons/pinterest.png" alt="Pinterest"/></li>
+            <li data-color="blue" data-tag="skype"><img src="images/icons/skype.png" alt="Skype"/></li>
+            <li data-color="blue" data-tag="tumblr"><img src="images/icons/tumblr.png" alt="Tumblr"/></li>
+            <li data-color="blue" data-tag="twitter"><img src="images/icons/twitter.png" alt="Twitter"/></li>
+            <li data-color="blue" data-tag="vimeo"><img src="images/icons/vimeo.png" alt="Vimeo"/></li>
+            <li data-color="purple" data-tag="yahoo"><img src="images/icons/yahoo.png" alt="Yahoo"/></li>
+            <li data-color="red" data-tag="youtube"><img src="images/icons/youtube.png" alt="Youtube"/></li>
+          </ul>
+          <div class="flip">
+            <div class="front">
+              <img src="images/icons/default.png" alt="Default"/>
+            </div>
+            <div class="back">
+              <img src="images/icons/default.png" alt="Default"/>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section>
+        <form action="">
+          <div class="form-item tag">
+            <label for="tag"><i class="icon-tag-1"> </i></label>
+            <input type="text" name="tag" id="tag" tabindex="1" />
+          </div>
+          <div class="form-item key">
+            <label for="key"><i class="icon-key"> </i></label>
+            <input type="password" class="password" name="key" id="key" tabindex="2" />
+          </div>
+          <div class="form-item hash">
+            <label for="hash"><i class="icon-keyboard"> </i></label>
+            <input type="text" name="hash" id="hash" class="hashword" tabindex="3" />
+          </div>
+        </form>
+      </section>
+    </div>
+    <div id="services">
+      <ul>
+        <li data-index="0"><img src="images/icons/default.png" alt="Default"/></li>
+        <li data-index="1"><img src="images/icons/blogger.png" alt="Blogger"/></li>
+        <li data-index="2"><img src="images/icons/delicious.png" alt="Delicious"/></li>
+        <li data-index="3"><img src="images/icons/dribble.png" alt="Dribble"/></li>
+        <li data-index="4"><img src="images/icons/dropbox.png" alt="Dropbox"/></li>
+        <li data-index="5"><img src="images/icons/ebay.png" alt="Ebay"/></li>
+        <li data-index="6"><img src="images/icons/facebook.png" alt="Facebook"/></li>
+        <li data-index="7"><img src="images/icons/lastfm.png" alt="LastFM"/></li>
+        <li data-index="8"><img src="images/icons/linkedin.png" alt="Linkedin"/></li>
+        <li data-index="9"><img src="images/icons/paypal.png" alt="Paypal"/></li>
+        <li data-index="10"><img src="images/icons/pinterest.png" alt="Pinterest"/></li>
+        <li data-index="11"><img src="images/icons/skype.png" alt="Skype"/></li>
+        <li data-index="12"><img src="images/icons/tumblr.png" alt="Tumblr"/></li>
+        <li data-index="13"><img src="images/icons/twitter.png" alt="Twitter"/></li>
+        <li data-index="14"><img src="images/icons/vimeo.png" alt="Vimeo"/></li>
+        <li data-index="15"><img src="images/icons/yahoo.png" alt="Yahoo"/></li>
+        <li data-color="16"><img src="images/icons/youtube.png" alt="Youtube"/></li>
+      </ul>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/dist/libs.min.js"></script>
+  <script type="text/javascript" src="js/dist/password.min.js"></script>
+</body>
+</html>
